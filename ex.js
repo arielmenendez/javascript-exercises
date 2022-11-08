@@ -43,3 +43,27 @@ const youngestUser = uniques.filter(unique => unique.age === minorAge);
 
 console.log(youngestUser);
 
+// 5.- Write a function the reverses a string.
+const reverseString = (str) => str.split('').reverse().join('');
+
+console.log(reverseString('Ariel'));
+
+// 6.- Write a function that filters out numbers from a list.
+const removeNums = (arr) => arr.filter(a => isNaN(+a));
+
+console.log(removeNums([1, '2', 'a', 'b']));
+
+// 7.- Write a function that finds an element inside an unsorted list.
+const search = (arr, searchItem) => arr.findIndex(a => a === searchItem);
+
+console.log(search(['Ariel', 'Menéndez', 'Méndez'], 'Ariel'));
+
+// 8.- Write a function that showcases the usage of closures.
+const multiply = (first) => {
+    let a = first;
+    return (b) => {
+        return a * b;
+    };
+}
+
+console.log(multiply(2)(3));
